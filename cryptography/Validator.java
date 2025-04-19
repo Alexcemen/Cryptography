@@ -8,6 +8,7 @@ import java.nio.file.Path;
 public class Validator {
     private final Alphabet alphabet = new Alphabet();
 
+    //проверяет, входит ли key в диапазон от 0 до alphabet.getSize()-1
     public boolean isValidKey(int key) {
         boolean isValid = key >= 0 && key < alphabet.getSize()-1;
         System.out.printf("Ключ %d %s условия валидации.%n",
@@ -15,6 +16,7 @@ public class Validator {
         return isValid;
     }
 
+    //проверяет, существует ли файл
     public boolean isFileExists(String filePath) {
         Path path = Path.of(filePath);
         boolean isFileExists = (Files.exists(path) && Files.isRegularFile(path));

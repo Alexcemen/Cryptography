@@ -16,31 +16,33 @@ public abstract class CaesarCipher {
 
     protected static final Alphabet alphabet = new Alphabet();
 
+    //самый главный метод
+    //в параметрах получаю inputFileName, outputFileName и !!!метод!!!
     protected void processFile(String inputFileName, String outputFileName, Function<String, String> lineProcessor) {
         try (BufferedReader bufferedReader = Files.newBufferedReader(Path.of(inputFileName), StandardCharsets.UTF_8)) {
             String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                String processedLine = lineProcessor.apply(line);
-                appendToFile(outputFileName, processedLine + System.lineSeparator());
+            while ((line = bufferedReader.readLine()) != null) {     //Сначала считываю с исходного файла строку
+                String processedLine = lineProcessor.apply(line);    //Эту строку шифрую или расшифровываю, в зависимости от третьего параметра
+                appendToFile(outputFileName, processedLine + System.lineSeparator());   //и сразу же записываю в оутпут файл
             }
         } catch (IOException e) {
             throw new RuntimeException("Ошибка при чтении файла: " + inputFileName, e);
         }
     }
 
-    public String encrypt(String originalText, int key) {
-        return process(originalText, key);
+    protected String encrypt(String line, int key) {
+        return process(line, key);
     }
 
-    public String decrypt(String originalText, int key) {
-        return process(originalText, -key);
+    protected String decrypt(String line, int key) {
+        return process(line, -key);
     }
 
-    private String process(String originalText, int key) {
+    private String process(String line, int key) {
         StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < originalText.length(); i++) {
-            char originalChar = originalText.charAt(i);
+        for (int i = 0; i < line.length(); i++) {
+            char originalChar = line.charAt(i);
             if (!alphabet.checkCharInAlphabet(originalChar)) {
                 continue;
             }
@@ -52,7 +54,7 @@ public abstract class CaesarCipher {
         return result.toString();
     }
 
-    protected void appendToFile(String fileName, String content) {
+    private void appendToFile(String fileName, String content) {
         try {
             Path filePath = Path.of(fileName);
             Files.writeString(filePath, content, FILE_WRITE_OPTIONS);

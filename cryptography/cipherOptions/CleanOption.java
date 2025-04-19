@@ -1,8 +1,6 @@
 package cryptography.cipherOptions;
 
-import cryptography.resources.FileNames;
-
-import java.nio.file.Files;
+import cryptography.resources.Resource;
 
 public class CleanOption extends CipherOption {
     @Override
@@ -17,10 +15,8 @@ public class CleanOption extends CipherOption {
 
     @Override
     public String[] requestArguments() {
-        String[] arguments = {"CLEAN", FileNames.getDefaultOutputFileNameForEncryption(),
-                FileNames.getDefaultOutputFileNameForDecryption(),
-        FileNames.getDefaultOutputFileNameForBruteForce()};
-        return arguments;
+        return new String[]{"CLEAN", Resource.getDefaultOutputFileNameForEncryption(),
+                Resource.getDefaultOutputFileNameForDecryption(),
+        Resource.getDefaultOutputFileNameForWhitespace()};
     }
-
 }

@@ -5,9 +5,10 @@ import cryptography.exeptions.AppException;
 public enum CipherOptions {
     ENCODE(new EncodeOption()),
     DECODE(new DecodeOption()),
-    BRUTE_FORCE(new BruteForceOption()),
+    WHITESPACE(new WhitespaceOption()),
     STATISTICAL_ANALYZER(new StatisticalAnalyzeOption()),
-    CLEAN(new CleanOption());
+    CLEAN(new CleanOption()),
+    EXIT(new Exit());
 
     private final CipherOption cipherOption;
 

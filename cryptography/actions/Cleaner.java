@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
-public class Clean implements Action {
+public class Cleaner implements Action {
     @Override
     public Result execute(String[] parameters) {
         String outputFileNameForEncryption = parameters[0];

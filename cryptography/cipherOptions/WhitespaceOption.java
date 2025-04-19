@@ -1,14 +1,14 @@
 package cryptography.cipherOptions;
 
-import cryptography.resources.FileNames;
+import cryptography.resources.Resource;
 
-public class BruteForceOption extends CipherOption {
+public class WhitespaceOption extends CipherOption {
 
     @Override
     public String[] requestArguments() {
         String inputFileNameForBruteForce = getInputFileName();
         String outputFileNameForBruteForce = getOutputFileName();
-        return new String[] {"BRUTE_FORCE", inputFileNameForBruteForce, outputFileNameForBruteForce};
+        return new String[] {"WHITESPACE", inputFileNameForBruteForce, outputFileNameForBruteForce};
     }
 
     @Override
@@ -16,12 +16,12 @@ public class BruteForceOption extends CipherOption {
         while (true) {
             System.out.println("Напишите путь к зашифрованному файлу, который нужно взломать.");
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
-            String inputFileNameForBruteForce = scanner.nextLine();
-            if (inputFileNameForBruteForce.isEmpty()) {
-                return FileNames.getDefaultInputFileNameForBruteForce();
+            String inputFileNameForWhitespace = scanner.nextLine();
+            if (inputFileNameForWhitespace.isEmpty()) {
+                return Resource.getDefaultInputFileNameForWhitespace();
             }
-            if (validator.isFileExists(inputFileNameForBruteForce)) {
-                return inputFileNameForBruteForce;
+            if (validator.isFileExists(inputFileNameForWhitespace)) {
+                return inputFileNameForWhitespace;
             } else {
                 System.out.println("Ошибка! Такого файла не существует\n");
             }
@@ -33,12 +33,12 @@ public class BruteForceOption extends CipherOption {
         while (true) {
             System.out.println("Напишите путь к файлу, в который нужно записать расшифрованный текст.");
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
-            String outputFileNameForBruteForce = scanner.nextLine();
-            if (outputFileNameForBruteForce.isEmpty()) {
-                return FileNames.getDefaultOutputFileNameForBruteForce();
+            String outputFileNameForWhitespace = scanner.nextLine();
+            if (outputFileNameForWhitespace.isEmpty()) {
+                return Resource.getDefaultOutputFileNameForWhitespace();
             }
-            if (validator.isFileExists(outputFileNameForBruteForce)) {
-                return outputFileNameForBruteForce;
+            if (validator.isFileExists(outputFileNameForWhitespace)) {
+                return outputFileNameForWhitespace;
             } else {
                 System.out.println("Ошибка! Такого файла не существует\n");
             }

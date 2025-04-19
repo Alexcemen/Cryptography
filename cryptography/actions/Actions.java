@@ -5,9 +5,9 @@ import cryptography.exeptions.AppException;
 public enum Actions {
     ENCODE(new Encoder()),
     DECODE(new Decoder()),
-    BRUTE_FORCE(new BruteForce()),
+    WHITESPACE(new Whitespacer()),
     STATISTICAL_ANALYZER(new StatisticalAnalyzer()),
-    CLEAN(new Clean());
+    CLEAN(new Cleaner());
     
     private final Action action;
 
