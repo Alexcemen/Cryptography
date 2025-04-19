@@ -2,10 +2,11 @@ package cryptography.resources;
 
 public class fileNames {
 
-    private static final String DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptography/src/cryptography/text/war_and_peace.ru.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptography/src/cryptography/text/outputFileNameForEncryption.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_DECRYPTION = "/Users/alexcemen/IdeaProjects/Cryptography/src/cryptography/text/outputFileNameForDecryption.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "/Users/alexcemen/IdeaProjects/Cryptography/src/cryptography/text/outputFileNameForBruteForce.txt";
+
+    private static final String DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/war_and_peace.ru.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForEncryption.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_DECRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForDecryption.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForBruteForce.txt";
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_STATISTICAL_ANALYZER = "";
 
     public static String getDefaultInputFileNameForEncryption() {

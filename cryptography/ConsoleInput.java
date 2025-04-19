@@ -49,8 +49,6 @@ public class ConsoleInput {
                 System.out.println("Сори, но я хз как это сделать");
                 yield "STATISTICAL_ANALYZER";
             }
-            //IDEA не дает убрать default. Хотя я еще в методе getNumberSelectedCipherOption() проверил,
-            //что не может быть другого значения, кроме как от 1 до 4
             default -> throw new IllegalStateException("Unexpected value");
         };
     }
