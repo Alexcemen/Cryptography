@@ -6,9 +6,9 @@ public class WhitespaceOption extends CipherOption {
 
     @Override
     public String[] requestArguments() {
-        String inputFileNameForBruteForce = getInputFileName();
-        String outputFileNameForBruteForce = getOutputFileName();
-        return new String[] {"WHITESPACE", inputFileNameForBruteForce, outputFileNameForBruteForce};
+        String inputFileNameForWhitespace = getInputFileName();
+        String outputFileNameForWhitespace = getOutputFileName();
+        return new String[] {"WHITESPACE", inputFileNameForWhitespace, outputFileNameForWhitespace};
     }
 
     @Override

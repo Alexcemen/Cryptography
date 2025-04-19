@@ -6,7 +6,7 @@ public enum Actions {
     ENCODE(new Encoder()),
     DECODE(new Decoder()),
     WHITESPACE(new Whitespacer()),
-    STATISTICAL_ANALYZER(new StatisticalAnalyzer()),
+    BRUTE_FORCE(new BruteForcer()),
     CLEAN(new Cleaner());
     
     private final Action action;

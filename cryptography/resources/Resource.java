@@ -7,7 +7,7 @@ public class Resource {
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForEncryption.txt";
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_DECRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForDecryption.txt";
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_WHITESPACE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForWhitespace.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_STATISTICAL_ANALYZER = "";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForBruteForce.txt";
     private static final String SECRET_PHRASE = "НУ И ПОЖАЛУЙСТА!!! НЕ ОЧЕНЬ-ТО И ХОТЕЛОСЬ!!!";
 
     public static String getDefaultInputFileNameForEncryption() {
@@ -38,11 +38,11 @@ public class Resource {
         return SECRET_PHRASE;
     }
 
-    public static String getDefaultInputFileNameForStatisticalAnalyzer() {
+    public static String getDefaultInputFileNameForBruteForce() {
         return getDefaultOutputFileNameForEncryption();
     }
 
-    public static String getDefaultOutputFileNameForStatisticalAnalyzer() {
-        return DEFAULT_OUTPUT_FILE_NAME_FOR_STATISTICAL_ANALYZER;
+    public static String getDefaultOutputFileNameForBruteForce() {
+        return DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE;
     }
 }
