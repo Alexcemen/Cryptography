@@ -9,6 +9,10 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+/*
+Делаем гипотезу, что самым частым символом в зашифрованном тексте является пробел.
+Пытаемся расшифровать файл.
+ */
 
 public class  BruteForce extends CaesarCipher implements Action {
     static int[] arrayFrequencyChar = new int[alphabet.getSize()];

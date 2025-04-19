@@ -40,7 +40,10 @@ public abstract class CaesarCipher {
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < originalText.length(); i++) {
-            Character originalChar = originalText.charAt(i);
+            char originalChar = originalText.charAt(i);
+            if (!alphabet.checkCharInAlphabet(originalChar)) {
+                continue;
+            }
             int originalIndexByChar = alphabet.getIndexByChar(originalChar);
             int newIndexByChar = (alphabet.getSize() + (originalIndexByChar + key)) % alphabet.getSize();
 

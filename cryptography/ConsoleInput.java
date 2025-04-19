@@ -49,6 +49,7 @@ public class ConsoleInput {
                 System.out.println("Сори, но я хз как это сделать");
                 yield "STATISTICAL_ANALYZER";
             }
+
             default -> throw new IllegalStateException("Unexpected value");
         };
     }
