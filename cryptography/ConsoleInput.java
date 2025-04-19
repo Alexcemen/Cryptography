@@ -27,6 +27,7 @@ public class ConsoleInput {
         System.out.println("2 - расшифровать файл (у меня есть ключ).");
         System.out.println("3 - взломать файл методом brute force");
         System.out.println("4 - взломать файл с помощью статистического анализатора");
+        System.out.println("5 - очистить содержимое дефолтных файлов");
         System.out.println();
     }
 
@@ -49,7 +50,10 @@ public class ConsoleInput {
                 System.out.println("Сори, но я хз как это сделать");
                 yield "STATISTICAL_ANALYZER";
             }
-
+            case 5 -> {
+                System.out.println("Вы выбрали \"очистить содержимое дефолтных файлов\"");
+                yield "CLEAN";
+            }
             default -> throw new IllegalStateException("Unexpected value");
         };
     }
@@ -57,13 +61,13 @@ public class ConsoleInput {
     private int getNumberSelectedCipherOption() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Введите цифру от 1 до 4: ");
+            System.out.println("Введите цифру от 1 до 5: ");
             String userInput = scanner.nextLine().trim();
 
-            if (userInput.matches("[1-4]")) {
+            if (userInput.matches("[1-5]")) {
                 return Integer.parseInt(userInput);
             } else {
-                System.out.println("Ошибка! Введите ЦИФРУ от 1 до 4.");
+                System.out.println("Ошибка! Введите ЦИФРУ от 1 до 5.");
             }
         }
     }

@@ -1,6 +1,6 @@
 package cryptography.cipherOptions;
 
-import cryptography.resources.fileNames;
+import cryptography.resources.FileNames;
 
 public class DecodeOption extends CipherOption {
     @Override
@@ -18,7 +18,7 @@ public class DecodeOption extends CipherOption {
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
             String inputFileNameForDecrypted = scanner.nextLine();
             if (inputFileNameForDecrypted.isEmpty()) {
-                return fileNames.getDefaultInputFileNameForDecryption();
+                return FileNames.getDefaultInputFileNameForDecryption();
             }
             if (validator.isFileExists(inputFileNameForDecrypted)) {
                 return inputFileNameForDecrypted;
@@ -35,7 +35,7 @@ public class DecodeOption extends CipherOption {
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
             String outputFileNameForDecryption = scanner.nextLine();
             if (outputFileNameForDecryption.isEmpty()) {
-                return fileNames.getDefaultOutputFileNameForDecryption();
+                return FileNames.getDefaultOutputFileNameForDecryption();
             }
             if (validator.isFileExists(outputFileNameForDecryption)) {
                 return outputFileNameForDecryption;

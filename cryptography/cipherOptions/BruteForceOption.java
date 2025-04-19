@@ -1,6 +1,6 @@
 package cryptography.cipherOptions;
 
-import cryptography.resources.fileNames;
+import cryptography.resources.FileNames;
 
 public class BruteForceOption extends CipherOption {
 
@@ -18,7 +18,7 @@ public class BruteForceOption extends CipherOption {
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
             String inputFileNameForBruteForce = scanner.nextLine();
             if (inputFileNameForBruteForce.isEmpty()) {
-                return fileNames.getDefaultInputFileNameForBruteForce();
+                return FileNames.getDefaultInputFileNameForBruteForce();
             }
             if (validator.isFileExists(inputFileNameForBruteForce)) {
                 return inputFileNameForBruteForce;
@@ -35,7 +35,7 @@ public class BruteForceOption extends CipherOption {
             System.out.println("Или нажмите на \"ENTER\", и мы предоставим свой файл");
             String outputFileNameForBruteForce = scanner.nextLine();
             if (outputFileNameForBruteForce.isEmpty()) {
-                return fileNames.getDefaultOutputFileNameForBruteForce();
+                return FileNames.getDefaultOutputFileNameForBruteForce();
             }
             if (validator.isFileExists(outputFileNameForBruteForce)) {
                 return outputFileNameForBruteForce;

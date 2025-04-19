@@ -1,6 +1,6 @@
 package cryptography.resources;
 
-public class fileNames {
+public class FileNames {
 
 
     private static final String DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/war_and_peace.ru.txt";

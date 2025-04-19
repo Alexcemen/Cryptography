@@ -6,7 +6,8 @@ public enum CipherOptions {
     ENCODE(new EncodeOption()),
     DECODE(new DecodeOption()),
     BRUTE_FORCE(new BruteForceOption()),
-    STATISTICAL_ANALYZER(new StatisticalAnalyzeOption());
+    STATISTICAL_ANALYZER(new StatisticalAnalyzeOption()),
+    CLEAN(new CleanOption());
 
     private final CipherOption cipherOption;
 
