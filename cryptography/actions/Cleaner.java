@@ -16,12 +16,15 @@ public class Cleaner implements Action {
         Path path1 = Path.of(outputFileNameForEncryption);
         String outputFileNameForDecryption = parameters[1];
         Path path2 = Path.of(outputFileNameForDecryption);
-        String outputFileNameForBruteForce = parameters[2];
-        Path path3 = Path.of(outputFileNameForBruteForce);
+        String outputFileNameForWhitespace = parameters[2];
+        Path path3 = Path.of(outputFileNameForWhitespace);
+        String outputFileNameForBruteForce = parameters[3];
+        Path path4 = Path.of(outputFileNameForBruteForce);
         try {
             Files.newBufferedWriter(path1, StandardOpenOption.TRUNCATE_EXISTING).close();
             Files.newBufferedWriter(path2, StandardOpenOption.TRUNCATE_EXISTING).close();
             Files.newBufferedWriter(path3, StandardOpenOption.TRUNCATE_EXISTING).close();
+            Files.newBufferedWriter(path4, StandardOpenOption.TRUNCATE_EXISTING).close();
         } catch (IOException e) {
             throw new FileProcessingException(e.getMessage());
         }

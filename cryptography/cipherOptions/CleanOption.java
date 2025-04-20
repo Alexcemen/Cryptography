@@ -17,6 +17,7 @@ public class CleanOption extends CipherOption {
     public String[] requestArguments() {
         return new String[]{"CLEAN", Resource.getDefaultOutputFileNameForEncryption(),
                 Resource.getDefaultOutputFileNameForDecryption(),
-        Resource.getDefaultOutputFileNameForWhitespace()};
+        Resource.getDefaultOutputFileNameForWhitespace(),
+        Resource.getDefaultOutputFileNameForBruteForce()};
     }
 }

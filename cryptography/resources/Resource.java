@@ -9,6 +9,7 @@ public class Resource {
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_WHITESPACE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForWhitespace.txt";
     private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForBruteForce.txt";
     private static final String SECRET_PHRASE = "НУ И ПОЖАЛУЙСТА!!! НЕ ОЧЕНЬ-ТО И ХОТЕЛОСЬ!!!";
+    private static final String GLOSSARY_FILE_NAME = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/resources/glossary.txt";
 
     public static String getDefaultInputFileNameForEncryption() {
         return DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION;
@@ -44,5 +45,9 @@ public class Resource {
 
     public static String getDefaultOutputFileNameForBruteForce() {
         return DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE;
+    }
+
+    public static String getGlossaryFileName() {
+        return GLOSSARY_FILE_NAME;
     }
 }

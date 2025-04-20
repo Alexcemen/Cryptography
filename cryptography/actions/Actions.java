@@ -1,5 +1,6 @@
 package cryptography.actions;
 
+import cryptography.actions.bruteForce.BruteForcer;
 import cryptography.exeptions.AppException;
 
 public enum Actions {
