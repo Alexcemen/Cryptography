@@ -25,7 +25,7 @@ public class ConsoleInput {
         System.out.println("Что вы хотите:");
         System.out.println("1 - зашифровать свой файл");
         System.out.println("2 - расшифровать файл (у меня есть ключ).");
-        System.out.println("3 - взломать файл методом нахождения пробела");
+        System.out.println("3 - взломать файл методом Whitespace");
         System.out.println("4 - взломать файл с помощью Brute Force");
         System.out.println("5 - очистить содержимое дефолтных файлов");
         System.out.println("6 - выйти из программы");
@@ -43,8 +43,8 @@ public class ConsoleInput {
                 yield "DECODE";
             }
             case 3 -> {
-                System.out.println("Вы выбрали \"взломать файл методом нахождения пробела\"");
-                System.out.println("Метод пробела подразумевает, что самым часто встречающимся символом в зашифрованом тексте является пробел");
+                System.out.println("Вы выбрали \"взломать файл методом Whitespace\"");
+                System.out.println("Этот подразумевает, что самым часто встречающимся символом в зашифрованом тексте является пробел");
                 yield "WHITESPACE";
             }
             case 4 -> {

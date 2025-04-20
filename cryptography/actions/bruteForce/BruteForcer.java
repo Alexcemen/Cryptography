@@ -49,7 +49,7 @@ public class BruteForcer extends CaesarCipher implements Action {
 
         if (best != null) {
             System.out.println("Ключ: " + best.key);
-            System.out.println("Разделитель: " + best.delimiter);
+            System.out.println("Разделитель: '" + best.delimiter + "'");
             System.out.println("Количество совпадений со словарем: " + results.get(best));
         }
 
