@@ -3,13 +3,13 @@ package cryptography.resources;
 public class Resource {
 
 
-    private static final String DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/war_and_peace.ru.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_ENCRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForEncryption.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_DECRYPTION = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForDecryption.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_WHITESPACE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForWhitespace.txt";
-    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/text/outputFileNameForBruteForce.txt";
+    private static final String DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION = "cryptography/text/war_and_peace.ru.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_ENCRYPTION = "cryptography/text/outputFileNameForEncryption.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_DECRYPTION = "cryptography/text/outputFileNameForDecryption.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_WHITESPACE = "cryptography/text/outputFileNameForWhitespace.txt";
+    private static final String DEFAULT_OUTPUT_FILE_NAME_FOR_BRUTE_FORCE = "cryptography/text/outputFileNameForBruteForce.txt";
+    private static final String GLOSSARY_FILE_NAME = "cryptography/resources/glossary.txt";
     private static final String SECRET_PHRASE = "НУ И ПОЖАЛУЙСТА!!! НЕ ОЧЕНЬ-ТО И ХОТЕЛОСЬ!!!";
-    private static final String GLOSSARY_FILE_NAME = "/Users/alexcemen/IdeaProjects/Cryptographyy/cryptography/resources/glossary.txt";
 
     public static String getDefaultInputFileNameForEncryption() {
         return DEFAULT_INPUT_FILE_NAME_FOR_ENCRYPTION;
